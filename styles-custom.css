@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+# Custom Styles
+--------------------------------------------------------------*/
+
+/* Font
+--------------------------------------------- */
+* {
+	font-family: "Atkinson Hyperlegible", system-ui;
+}
+
+/* Images
+--------------------------------------------- */
+.hero {
+  background-size:cover;
+  background-position:center;
+}
+.image img {
+  border-radius: 3px;
+  object-fit:cover;
+	max-width:100%;
+	width:auto;
+}
+
+/* Layout
+--------------------------------------------- */
+@media screen and (min-width: 769px){
+  .column.isSticky {
+    position:sticky;
+    height:100vh;
+    top:4rem;
+  }
+}
+
+/* Navigation
+--------------------------------------------- */
+a.navbar-item.is-active.about {
+	background-color: hsl(30, 36.8%, 54.1%);
+}
+a.navbar-item.is-active.dogs {
+	background-color:hsl(198, 100%, 70%);
+}
+@media screen and (prefers-color-scheme:light){
+	a.navbar-item.is-active {
+		color: #fff;
+	}
+}
+@media screen and (prefers-color-scheme:dark){
+	a.navbar-item.is-active {
+		color: #14161a;
+	}
+	a.navbar-item.is-active.blog {
+		color: #fff;
+	}
+}
+
+/* Sidebar
+--------------------------------------------- */
+.pageSidebar .container {
+  border: thin solid grey;
+}
+.pageSidebar .sidebarDonate {
+	color: #fff;
+}
+
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumb ul {
+  justify-content:flex-end;
+}
+.breadcrumb li:not(.is-active):hover > a {
+	text-decoration: underline;
+}
+
+.dogs-template-default .breadcrumb .breadcrumb-links > li > a,
+.dogs-template-default .breadcrumb li + li::before {
+	color: #14161a;
+}
+.post-template-default .breadcrumb .breadcrumb-links > li > a,
+.post-template-default .breadcrumb li + li::before {
+	color: #fff;
+}
+
+/* Blog (Ranch Stories)
+--------------------------------------------- */
+.pagination .navigation {
+	width:100%;
+}
+.pagination .navigation .nav-links {
+	display:flex;
+	justify-content: space-between;
+}
+.nav-previous .has-background-link {
+	color: #fff;
+}
+
+/* Dogs
+--------------------------------------------- */
+.dogPost {
+  cursor: pointer;
+}
+.dogPost figure img {
+  border: thin solid transparent;
+}
+.dogPost .title {
+  border-bottom: thin solid transparent;
+}
+@media screen and (prefers-color-scheme:dark){
+	.title.dogExcerpt > a {
+		color: #fff;
+	}
+	.dogPost:hover figure img,
+	.dogPost:hover .title {
+		border-color:silver;
+	}
+}
+@media screen and (prefers-color-scheme:light){
+	.title.dogExcerpt > a {
+		color: #14161a;
+	}
+	.dogPost:hover figure img,
+	.dogPost:hover .title {
+		border-color:#14161a;
+	}
+}
